@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Международная конкурентоспособность. Спецкурс</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#4DA8F0;--sky-deep:#0B5DB5;--ink:#0A2240;--paper:#F1F7FE;--sun:#FFD43B;--display:'Unbounded','Arial Black',sans-serif;--body:'Golos Text','Segoe UI',Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.stripe{display:flex;height:8px}.stripe i{flex:1}.stripe i:nth-child(1){background:var(--ink)}.stripe i:nth-child(2){background:var(--sun)}.stripe i:nth-child(3){background:var(--sky-deep)}.stripe i:nth-child(4){background:#fff}
+.hero{background:var(--sky);padding:28px 0 36px}
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--sky);padding:7px 12px;border-radius:99px}
+.cname{font-family:var(--display);font-weight:800;font-size:clamp(17px,5.2vw,36px);line-height:1.04;margin-top:16px;color:var(--ink);overflow-wrap:anywhere}
+.hero h1{font-weight:800;font-size:clamp(22px,6vw,40px);margin:18px 0 16px;line-height:1.14}
+.hero h1 em{font-style:normal;background:var(--sun);padding:0 .12em;border-radius:.12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{font-size:19px;max-width:30em;font-weight:500}
+.qh{margin-top:24px;font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase}
+.qs{list-style:none;display:grid;gap:10px;margin-top:10px;max-width:34em}
+.qs li{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:14px 16px;font-weight:600;font-size:17px;line-height:1.3}
+.go-btn{display:inline-block;margin-top:22px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:15px 22px;border-radius:14px}
+.ticker{background:var(--ink);color:var(--sky);overflow:hidden;white-space:nowrap;padding:13px 0;font-family:var(--display);font-weight:600;font-size:14px}
+.ticker div{display:inline-block;animation:slide 38s linear infinite}
+.ticker span{margin:0 18px}.ticker i{font-style:normal;color:var(--sun)}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}html{scroll-behavior:auto}}
+.panel{padding:40px 0 20px;scroll-margin-top:8px}
+.panel h2{font-size:clamp(17px,5.2vw,32px);font-weight:800;margin-bottom:12px}
+.panel h3.sec{font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:34px 0 14px;color:var(--sky-deep)}
+.about{background:#fff;border:2px solid var(--ink);border-left:10px solid var(--sun);border-radius:16px;padding:18px 18px 16px;margin:6px 0 26px}
+.about h3{font-family:var(--display);font-size:15px;font-weight:800;margin-bottom:8px}
+.about p{font-size:17px;margin-bottom:10px}.about p:last-child{margin-bottom:0}
+.about b{font-weight:700;background:linear-gradient(transparent 62%,rgba(255,212,59,.65) 62%)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.facts div{padding:14px 10px;border-radius:14px;background:var(--sky);text-align:center}
+.facts b{display:block;font-family:var(--display);font-size:26px;font-weight:800;font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;font-weight:600;line-height:1.2;display:block}
+.topics{display:grid;gap:12px;list-style:none}
+.topics li{padding:16px 18px;border-radius:16px;background:#fff;border:2px solid var(--ink)}
+.topics b{display:block;font-family:var(--display);font-size:16px;font-weight:600;margin-bottom:4px;line-height:1.2}
+.topics span{font-size:16px}
+.why{list-style:none;display:grid;gap:10px}
+.why li{padding:14px 16px 14px 48px;border-radius:14px;background:var(--sky);position:relative;font-size:16px}
+.why li::before{content:"";position:absolute;left:16px;top:18px;width:18px;height:18px;border-radius:5px;background:var(--ink)}
+.why li::after{content:"";position:absolute;left:21px;top:21px;width:5px;height:9px;border:solid var(--sun);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.why b{font-family:var(--display);font-weight:600;font-size:15px;display:block;margin-bottom:2px;line-height:1.25}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{padding:8px 14px;border-radius:99px;background:var(--sun);font-weight:600;font-size:15px}
+.points{display:flex;height:46px;border-radius:12px;overflow:hidden;border:2px solid var(--ink);font-variant-numeric:tabular-nums;font-weight:700;font-size:14px}
+.points div{display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.points .a{flex:30;background:#CFE6FB}.points .b{flex:44;background:var(--sun)}.points .c{flex:24;background:#9CCBF5}.points .d{flex:22;background:#6DB4F2}.points .z{flex:30;background:var(--sky-deep);color:#fff}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:12px;font-size:15px}
+.note{margin-top:12px;font-size:15px;opacity:.85}
+.team{padding:48px 0 12px}
+.team h2{font-size:clamp(24px,6.5vw,34px);font-weight:800;margin-bottom:18px}
+.person{padding:18px;border-radius:16px;background:#fff;border:2px solid var(--ink)}
+.person b{font-family:var(--display);font-weight:600;font-size:18px;display:block;margin-bottom:4px}
+.person span{font-size:16px;display:block}
+.person .hl{margin:8px 0 0;font-weight:600;padding:8px 10px;border-radius:10px;background:rgba(255,212,59,.55)}
+.cta{background:var(--sky);margin-top:44px;padding:44px 0 56px}
+.cta h2{font-size:clamp(26px,7.4vw,44px);font-weight:800;margin-bottom:12px}
+.cta p{font-size:18px;font-weight:500;max-width:28em}
+.cta .when{display:inline-block;margin-top:20px;background:var(--ink);color:#fff;padding:14px 20px;border-radius:14px;font-weight:700}
+.cta .when i{font-style:normal;color:var(--sun)}
+footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
+</style>
+</head>
+<body>
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Спецкурс по выбору · магистратура</span>
+  <div class="cname">Международная конкурентоспособность</div>
+  <h1>Почему одни страны выигрывают, а другие <em>вечно догоняют?</em></h1>
+  <p>Рейтинги, индексы, нефть, валютный курс и политика государства. Разбираем, из чего на самом деле складывается сила национальной экономики.</p>
+  <p class="qh">Вопросы, которые будем решать:</p>
+  <ul class="qs">
+    <li>Сингапур на первом месте в рейтингах. Что за этим стоит?</li>
+    <li>Помогают ли нефть и газ конкурентоспособности страны или мешают?</li>
+    <li>Что мешает российской экономике подняться выше?</li>
+  </ul>
+  <a class="go-btn" href="#about">О курсе ↓</a>
+</div></header>
+<div class="ticker" aria-hidden="true"><div><span>Всемирный экономический форум</span><i>●</i><span>М. Портер</span><i>●</i><span>Сингапур</span><i>●</i><span>Финляндия</span><i>●</i><span>Китай</span><i>●</i><span>БРИКС</span><i>●</i><span>ЕАЭС</span><i>●</i><span>Индекс глобальной конкурентоспособности</span><i>●</i><span>Стабилизационные фонды</span><i>●</i><span>Всемирный экономический форум</span><i>●</i><span>М. Портер</span><i>●</i><span>Сингапур</span><i>●</i><span>Финляндия</span><i>●</i><span>Китай</span><i>●</i><span>БРИКС</span><i>●</i><span>ЕАЭС</span><i>●</i><span>Индекс глобальной конкурентоспособности</span><i>●</i><span>Стабилизационные фонды</span><i>●</i></div></div>
+<main><section class="panel" id="about"><div class="wrap">
+  <h2>Международная конкурентоспособность</h2>
+  <div class="about"><h3>О чём курс</h3>
+    <p>Что делает страну конкурентоспособной и как это измерить. Начинаем с теории и вклада Портера, затем разбираем рейтинги Всемирного экономического форума и то, как их считают.</p>
+    <p><b>Для кого:</b> для магистров экономики, которым интересно, как устроена сила национальной экономики и почему рейтинги меняются.</p>
+    <p><b>Что получишь:</b> научишься читать индексы конкурентоспособности, сравнивать страны и объяснять, что помогает или мешает им расти.</p>
+  </div>
+  <div class="facts">
+    <div><b>108</b><span>часов всего</span></div>
+    <div><b>52</b><span>часа с преподавателем</span></div>
+    <div><b>3</b><span>зачётные единицы</span></div>
+  </div>
+  <h3 class="sec">Что разберём</h3>
+  <ul class="topics">
+    <li><b>Конкурентная среда и концепция конкурентоспособности</b><span>Конкурентные преимущества, факторы конкурентоспособности страны, предприятия и товара.</span></li>
+    <li><b>Базовые исследования конкурентоспособности</b><span>Методики Европейского и Международного форумов по развитию менеджмента, место М. Портера в теории.</span></li>
+    <li><b>Преимущества отдельных стран</b><span>США, Европейский союз, Финляндия, Китай, страны АТР, БРИК, ЕАЭС.</span></li>
+    <li><b>Рейтинг Всемирного экономического форума</b><span>Как формируется индекс, как менялась методика и что показывают последние результаты.</span></li>
+    <li><b>Страны с богатыми ресурсами</b><span>Нефть, платёжный баланс, стабилизационные фонды. Помогает ли богатство ресурсами конкурентоспособности?</span></li>
+    <li><b>Как государство управляет конкурентоспособностью</b><span>Опыт разных стран, зависимость мер от стадии развития экономики, цифровая конкурентоспособность.</span></li>
+    <li><b>Валютный курс и конкурентоспособность</b><span>Номинальный и реальный эффективный курс, как курс влияет на экспорт и фирмы.</span></li>
+    <li><b>Конкурентоспособность России</b><span>Преимущества, ограничения, внешние условия и меры по повышению долгосрочной конкурентоспособности.</span></li>
+  </ul>
+  <h3 class="sec">Почему стоит выбрать этот курс</h3>
+  <ul class="why">
+    <li><b>Учимся читать рейтинги</b>Разбираем, как считают индексы и что за ними стоит, чтобы не принимать место в рейтинге на веру.</li>
+    <li><b>Кейсы вместо зубрёжки</b>Кейс-анализ и ответы на занятиях дают 96 баллов из 150.</li>
+    <li><b>Эссе в формате презентации</b>Исследовательский проект готовится индивидуально и защищается презентацией.</li>
+    <li><b>Преподаёт автор монографий по теме</b>Швандар К.В. написала книги о международной конкурентоспособности, в том числе о странах-экспортёрах нефти.</li>
+    <li><b>Отдельный разговор о России</b>Что даёт российской экономике преимущества и что их ограничивает.</li>
+  </ul>
+  <h3 class="sec">Чему научишься</h3>
+  <ul class="chips">
+    <li>Читать рейтинги конкурентоспособности</li>
+    <li>Сравнивать страны</li>
+    <li>Оценивать роль валютного курса</li>
+    <li>Готовить аналитическое эссе</li>
+  </ul>
+  <h3 class="sec">Как сдавать</h3>
+  <div class="points" role="img" aria-label="Распределение баллов: 30 ответы на занятиях, 44 кейс-анализ, 24 исследовательский проект, 22 текущая аттестация, 30 устный опрос, всего 150">
+    <div class="a">30</div><div class="b">44</div><div class="c">24</div><div class="d">22</div><div class="z">30</div>
+  </div>
+  <div class="legend">
+    <span><b>30</b> ответы на занятиях</span><span><b>44</b> кейс-анализ</span>
+    <span><b>24</b> проект-презентация</span><span><b>22</b> текущая аттестация</span>
+    <span><b>30</b> устный опрос</span><span><b>150</b> всего</span>
+  </div>
+  <p class="note">Отлично: от 127,5. Хорошо: от 97,5. Удовлетворительно: от 60. Ниже 60: неудовлетворительно. Исследовательский проект (аналитическое эссе) готовится индивидуально и представляется в формате презентации.</p>
+</div></section>
+<section class="team"><div class="wrap">
+  <h2>Кто ведёт</h2>
+  <div class="person"><b>Швандар К.В.</b><span>Доктор экономических наук, профессор, и.о. заведующего кафедрой мировой экономики</span><span class="hl">Автор монографий по международной конкурентоспособности</span></div>
+</div></section>
+<section class="cta"><div class="wrap">
+  <h2>Хочешь понять, почему одни экономики сильнее других?</h2>
+  <p>Подробности о записи на спецкурсы уточняйте на кафедре мировой экономики. Точную информацию сообщим дополнительно.</p>
+  <span class="when">Кафедра мировой экономики · <i>экономический факультет МГУ</i></span>
+</div></section></main>
+<footer>Кафедра мировой экономики, экономический факультет МГУ</footer>
+</body></html>

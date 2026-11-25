@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Международные платежи и расчёты. Спецкурс</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#A48BF5;--sky-deep:#4B2BC4;--ink:#1A1040;--paper:#F6F3FE;--sun:#FFD43B;--display:'Unbounded','Arial Black',sans-serif;--body:'Golos Text','Segoe UI',Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.stripe{display:flex;height:8px}.stripe i{flex:1}.stripe i:nth-child(1){background:var(--ink)}.stripe i:nth-child(2){background:var(--sun)}.stripe i:nth-child(3){background:var(--sky-deep)}.stripe i:nth-child(4){background:#fff}
+.hero{background:var(--sky);padding:28px 0 36px}
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--sky);padding:7px 12px;border-radius:99px}
+.cname{font-family:var(--display);font-weight:800;font-size:clamp(24px,6.6vw,48px);line-height:1.04;margin-top:16px;color:var(--ink);overflow-wrap:anywhere}
+.hero h1{font-weight:800;font-size:clamp(22px,6vw,40px);margin:18px 0 16px;line-height:1.14}
+.hero h1 em{font-style:normal;background:var(--sun);padding:0 .12em;border-radius:.12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{font-size:19px;max-width:30em;font-weight:500}
+.qh{margin-top:24px;font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase}
+.qs{list-style:none;display:grid;gap:10px;margin-top:10px;max-width:34em}
+.qs li{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:14px 16px;font-weight:600;font-size:17px;line-height:1.3}
+.go-btn{display:inline-block;margin-top:22px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;padding:15px 22px;border-radius:14px}
+.ticker{background:var(--ink);color:var(--sky);overflow:hidden;white-space:nowrap;padding:13px 0;font-family:var(--display);font-weight:600;font-size:14px}
+.ticker div{display:inline-block;animation:slide 38s linear infinite}
+.ticker span{margin:0 18px}.ticker i{font-style:normal;color:var(--sun)}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}html{scroll-behavior:auto}}
+.panel{padding:40px 0 20px;scroll-margin-top:8px}
+.panel h2{font-size:clamp(22px,6.2vw,34px);font-weight:800;margin-bottom:12px}
+.panel h3.sec{font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:34px 0 14px;color:var(--sky-deep)}
+.about{background:#fff;border:2px solid var(--ink);border-left:10px solid var(--sun);border-radius:16px;padding:18px 18px 16px;margin:6px 0 26px}
+.about h3{font-family:var(--display);font-size:15px;font-weight:800;margin-bottom:8px}
+.about p{font-size:17px;margin-bottom:10px}.about p:last-child{margin-bottom:0}
+.about b{font-weight:700;background:linear-gradient(transparent 62%,rgba(255,212,59,.65) 62%)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.facts div{padding:14px 10px;border-radius:14px;background:var(--sky);text-align:center}
+.facts b{display:block;font-family:var(--display);font-size:26px;font-weight:800;font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;font-weight:600;line-height:1.2;display:block}
+.topics{display:grid;gap:12px;list-style:none}
+.topics li{padding:16px 18px;border-radius:16px;background:#fff;border:2px solid var(--ink)}
+.topics b{display:block;font-family:var(--display);font-size:16px;font-weight:600;margin-bottom:4px;line-height:1.2}
+.topics span{font-size:16px}
+.why{list-style:none;display:grid;gap:10px}
+.why li{padding:14px 16px 14px 48px;border-radius:14px;background:var(--sky);position:relative;font-size:16px}
+.why li::before{content:"";position:absolute;left:16px;top:18px;width:18px;height:18px;border-radius:5px;background:var(--ink)}
+.why li::after{content:"";position:absolute;left:21px;top:21px;width:5px;height:9px;border:solid var(--sun);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.why b{font-family:var(--display);font-weight:600;font-size:15px;display:block;margin-bottom:2px;line-height:1.25}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{padding:8px 14px;border-radius:99px;background:var(--sun);font-weight:600;font-size:15px}
+.points{display:flex;height:46px;border-radius:12px;overflow:hidden;border:2px solid var(--ink);font-variant-numeric:tabular-nums;font-weight:700;font-size:14px}
+.points div{display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.points .a{flex:30;background:#E3DAFB}.points .b{flex:44;background:var(--sun)}.points .c{flex:24;background:#C9B9F8}.points .d{flex:22;background:#B4A0F6}.points .z{flex:30;background:var(--sky-deep);color:#fff}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:12px;font-size:15px}
+.note{margin-top:12px;font-size:15px;opacity:.85}
+.team{padding:48px 0 12px}
+.team h2{font-size:clamp(24px,6.5vw,34px);font-weight:800;margin-bottom:18px}
+.person{padding:18px;border-radius:16px;background:#fff;border:2px solid var(--ink)}
+.person b{font-family:var(--display);font-weight:600;font-size:18px;display:block;margin-bottom:4px}
+.person span{font-size:16px;display:block}
+.person .hl{margin:8px 0 0;font-weight:600;padding:8px 10px;border-radius:10px;background:rgba(255,212,59,.55)}
+.cta{background:var(--sky);margin-top:44px;padding:44px 0 56px}
+.cta h2{font-size:clamp(26px,7.4vw,44px);font-weight:800;margin-bottom:12px}
+.cta p{font-size:18px;font-weight:500;max-width:28em}
+.cta .when{display:inline-block;margin-top:20px;background:var(--ink);color:#fff;padding:14px 20px;border-radius:14px;font-weight:700}
+.cta .when i{font-style:normal;color:var(--sun)}
+footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
+</style>
+</head>
+<body>
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Спецкурс по выбору · магистратура</span>
+  <div class="cname">Международные платежи и расчёты</div>
+  <h1>Как деньги пересекают границу, когда мир <em>становится фрагментированным?</em></h1>
+  <p>Безналичные расчёты, платёжные системы, цифровые валюты центральных банков и расчёты в национальных валютах. Как это устроено и куда движется.</p>
+  <p class="qh">Вопросы, которые будем решать:</p>
+  <ul class="qs">
+    <li>Цифровые валюты центробанков: изменят ли они трансграничные платежи?</li>
+    <li>Расчёты в национальных валютах: как это работает в торговле стран ЕАЭС?</li>
+    <li>Клиринговые союзы: что придумал Кейнс и где это применяют сегодня?</li>
+  </ul>
+  <a class="go-btn" href="#about">О курсе ↓</a>
+</div></header>
+<div class="ticker" aria-hidden="true"><div><span>ЦВЦБ</span><i>●</i><span>Цифровой юань</span><i>●</i><span>Цифровой тенге</span><i>●</i><span>Project Icebreaker</span><i>●</i><span>Project Dunbar</span><i>●</i><span>SWIFT</span><i>●</i><span>Клиринговые союзы</span><i>●</i><span>ЕАЭС</span><i>●</i><span>Платёжные системы</span><i>●</i><span>ЦВЦБ</span><i>●</i><span>Цифровой юань</span><i>●</i><span>Цифровой тенге</span><i>●</i><span>Project Icebreaker</span><i>●</i><span>Project Dunbar</span><i>●</i><span>SWIFT</span><i>●</i><span>Клиринговые союзы</span><i>●</i><span>ЕАЭС</span><i>●</i><span>Платёжные системы</span><i>●</i></div></div>
+<main><section class="panel" id="about"><div class="wrap">
+  <h2>Международные платежи и расчёты</h2>
+  <div class="about"><h3>О чём курс</h3>
+    <p>Как деньги движутся от плательщика к получателю внутри страны и через границу. От теории платежей и безналичного общества до цифровых валют центральных банков и клиринговых союзов.</p>
+    <p><b>Для кого:</b> для магистров экономики, которым интересны финансы, банки и международные расчёты.</p>
+    <p><b>Что получишь:</b> разберёшься, как устроены платёжные системы и трансграничные транзакции, и научишься оценивать, куда они развиваются.</p>
+  </div>
+  <div class="facts">
+    <div><b>108</b><span>часов всего</span></div>
+    <div><b>52</b><span>часа с преподавателем</span></div>
+    <div><b>3</b><span>зачётные единицы</span></div>
+  </div>
+  <h3 class="sec">Что разберём</h3>
+  <ul class="topics">
+    <li><b>Теория и практика платежей</b><span>Деньги, роль банков, путь транзакции от плательщика к получателю. Особенности трансграничных транзакций: глобализация или фрагментация.</span></li>
+    <li><b>Безналичные расчёты в экономике</b><span>Зачем государства ограничивают наличные, что тормозит переход к безналичному обществу, как влияют цифровизация и пандемия.</span></li>
+    <li><b>Платёжные системы мира</b><span>Классификация, национальные и международные системы, их роль в финансовой системе. Российские платёжные системы.</span></li>
+    <li><b>Цифровые платежи и цифровые валюты</b><span>Цифровые валюты центральных банков и частные криптовалюты, эксперименты центробанков в трансграничных платежах.</span></li>
+    <li><b>Расчёты в национальных валютах</b><span>Плюсы и минусы, расширение роли национальных валют, расчёты во взаимной торговле стран ЕАЭС.</span></li>
+    <li><b>Клиринговые союзы</b><span>Первый клиринговый союз и роль Кейнса, система SML, Азия, Африка.</span></li>
+  </ul>
+  <h3 class="sec">Почему стоит выбрать этот курс</h3>
+  <ul class="why">
+    <li><b>Тема, которая меняется на глазах</b>Трансграничные платежи в условиях геополитической неопределённости и новые проекты с цифровыми валютами.</li>
+    <li><b>Кейсы вместо зубрёжки</b>Кейс-анализ и ответы на занятиях дают 96 баллов из 150.</li>
+    <li><b>Эссе в формате презентации</b>Исследовательский проект готовится индивидуально и защищается презентацией.</li>
+    <li><b>Преподаёт автор исследований по теме</b>Швандар К.В. публикует работы о безналичных платежах и цифровых валютах центральных банков.</li>
+    <li><b>Понятные правила</b>Список вопросов к устному опросу есть в программе курса.</li>
+  </ul>
+  <h3 class="sec">Чему научишься</h3>
+  <ul class="chips">
+    <li>Разбираться в платёжных системах</li>
+    <li>Оценивать цифровые валюты</li>
+    <li>Анализировать трансграничные расчёты</li>
+    <li>Готовить аналитическое эссе</li>
+  </ul>
+  <h3 class="sec">Как сдавать</h3>
+  <div class="points" role="img" aria-label="Распределение баллов: 30 ответы на занятиях, 44 кейс-анализ, 24 исследовательский проект, 22 текущая аттестация, 30 устный опрос, всего 150">
+    <div class="a">30</div><div class="b">44</div><div class="c">24</div><div class="d">22</div><div class="z">30</div>
+  </div>
+  <div class="legend">
+    <span><b>30</b> ответы на занятиях</span><span><b>44</b> кейс-анализ</span>
+    <span><b>24</b> проект-презентация</span><span><b>22</b> текущая аттестация</span>
+    <span><b>30</b> устный опрос</span><span><b>150</b> всего</span>
+  </div>
+  <p class="note">Отлично: от 127,5. Хорошо: от 97,5. Удовлетворительно: от 60. Ниже 60: неудовлетворительно. Исследовательский проект (аналитическое эссе) готовится индивидуально и представляется в формате презентации.</p>
+</div></section>
+<section class="team"><div class="wrap">
+  <h2>Кто ведёт</h2>
+  <div class="person"><b>Швандар К.В.</b><span>Доктор экономических наук, профессор, и.о. заведующего кафедрой мировой экономики</span><span class="hl">Автор статей о безналичных платежах и цифровых валютах центральных банков</span></div>
+</div></section>
+<section class="cta"><div class="wrap">
+  <h2>Хочешь понять, как на самом деле движутся деньги?</h2>
+  <p>Подробности о записи на спецкурсы уточняйте на кафедре мировой экономики. Точную информацию сообщим дополнительно.</p>
+  <span class="when">Кафедра мировой экономики · <i>экономический факультет МГУ</i></span>
+</div></section></main>
+<footer>Кафедра мировой экономики, экономический факультет МГУ</footer>
+</body></html>
