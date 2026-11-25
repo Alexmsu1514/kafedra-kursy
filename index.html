@@ -47,6 +47,68 @@ h2{font-size:clamp(22px,6vw,32px);font-weight:800;margin-bottom:8px}
 .person b{font-family:var(--display);font-weight:600;font-size:18px;display:block;margin-bottom:4px}
 .person span{display:block;font-size:16px}
 .person .hl{margin-top:8px;font-weight:600;padding:8px 10px;border-radius:10px;background:rgba(77,168,240,.35)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tools input{flex:1 1 100%;font:inherit;padding:12px 14px;border:2px solid var(--ink);border-radius:12px;background:#fff;color:var(--ink)}
+.fb{font:inherit;font-weight:700;padding:10px 16px;border-radius:99px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.fb.on{background:var(--ink);color:#fff}
+.lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;opacity:.7;margin-top:10px}
+.int{margin:4px 0 0 18px}
+.lnk{display:inline-block;margin-top:8px;font-weight:700}
+.none{margin-top:12px;font-weight:600}
+.group>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;font-size:clamp(22px,6vw,32px);line-height:1.1;padding:18px 20px;border:3px solid var(--ink);border-radius:20px;background:#fff}
+.group>summary::-webkit-details-marker{display:none}
+.group>summary span{flex:1}
+.group>summary em{font-style:normal;font-family:var(--body);font-size:15px;font-weight:700;background:var(--sun);border-radius:99px;padding:4px 12px}
+.group>summary::after{content:"+";flex:none;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--body);font-size:24px;font-weight:700;line-height:1}
+.group[open]>summary::after{content:"\2212"}
+.group[open]>summary{margin-bottom:16px}
+.person summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.25}
+.person summary::-webkit-details-marker{display:none}
+.person summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--body);font-size:20px;font-weight:700;line-height:1}
+.person.empty summary{cursor:default;pointer-events:none}
+.person.empty summary::after{display:none}
+.person[open] summary::after{content:"2"}
+.person .body{display:flex;flex-direction:column;gap:2px;margin-top:10px}
+.person:not(.top) summary{font-size:16px}
+.person.top{background:var(--sun);border-width:3px}
+.person.top .hl{background:rgba(255,255,255,.6)}
+.person[hidden]{display:none}
+html:not(.js) .rv{opacity:1}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.globe{position:absolute;right:-90px;top:-40px;width:420px;height:420px;opacity:.22;pointer-events:none;color:var(--ink)}
+.nav{position:sticky;top:0;z-index:20;background:var(--ink);box-shadow:0 2px 0 rgba(255,255,255,.08)}
+.nav ul{display:flex;gap:6px;list-style:none;overflow-x:auto;padding:10px 20px;max-width:720px;margin:0 auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{display:block;white-space:nowrap;text-decoration:none;color:#fff;font-weight:600;font-size:14px;padding:8px 14px;border-radius:99px;border:2px solid rgba(255,255,255,.25)}
+.nav a:hover,.nav a.on{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+section{scroll-margin-top:56px}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+.topics{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.topics li{padding:9px 15px;border-radius:99px;font-weight:700;font-size:15px;border:2px solid var(--ink);background:#fff}
+.topics li:nth-child(4n+1){background:#22B26A}.topics li:nth-child(4n+2){background:var(--sun)}.topics li:nth-child(4n+3){background:#A48BF5}.topics li:nth-child(4n){background:#FFD43B}
+.card .num{font-family:var(--display);font-weight:800;font-size:44px;line-height:1;opacity:.18;position:absolute;right:16px;top:10px}
+.card{position:relative}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card{transition:none}}
+.res{margin-top:6px}
+.r{padding:18px;border-radius:18px;background:#fff;border:3px solid var(--ink);display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.r[hidden]{display:none}
+.r b{font-family:var(--display);font-size:20px}
+.r .btn{margin-top:8px;margin-right:6px}
+.fb.on{background:var(--ink);color:#fff}
+.faq{display:grid;gap:10px}
+.faq details{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:14px 16px}
+.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:700}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin-top:10px}
+.ev{padding:16px;border-radius:16px;background:#fff;border:2px solid var(--ink);display:flex;flex-direction:column;gap:4px}
+.ev .dt{font-weight:700;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:#1C6FB8}
+button.btn{font:inherit;font-weight:600;border:0;cursor:pointer}
+.totop{position:fixed;right:16px;bottom:16px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;text-decoration:none;font-size:22px;font-weight:700;z-index:30;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.totop[hidden]{display:none}
 .sub{margin-top:22px;font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase}
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-top:10px}
 .chips li{padding:8px 14px;border-radius:99px;background:var(--sun);font-weight:600;font-size:15px}
@@ -63,6 +125,7 @@ footer{padding:16px 0 26px;font-size:13px;opacity:.7;text-align:center}
 <body>
 <div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <header class="hero"><div class="wrap">
+  <svg class="globe" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="100" cy="100" r="90"/><ellipse cx="100" cy="100" rx="40" ry="90"/><ellipse cx="100" cy="100" rx="75" ry="90"/><path d="M10 100h180M22 60h156M22 140h156M45 28h110M45 172h110"/></svg>
   <span class="eyebrow">Экономический факультет МГУ</span>
   <div class="name">Кафедра мировой экономики</div>
   <h1>Приветствуем на кафедре мировой экономики!</h1>
@@ -70,33 +133,40 @@ footer{padding:16px 0 26px;font-size:13px;opacity:.7;text-align:center}
   <div class="facts">
     <div><b>1953</b><span>год основания</span></div>
     <div><b>3</b><span>научных центра</span></div>
-    <div><b>20</b><span>преподавателей и сотрудников</span></div>
+    <div><b>21</b><span>преподавателей и сотрудников</span></div>
   </div>
 </div></header>
+<nav class="nav" aria-label="Разделы"><ul>
+  <li><a href="#courses">Спецкурсы</a></li><li><a href="#about">О кафедре</a></li><li><a href="#people">Преподаватели</a></li><li><a href="#study">Программы</a></li><li><a href="#faq">Вопросы</a></li><li><a href="#contacts">Контакты</a></li>
+</ul></nav>
 <main>
-<section id="courses"><div class="wrap">
+<section id="courses" class="rv"><div class="wrap">
   <h2>Спецкурсы по выбору</h2>
   <p class="lead">Нажми на курс, чтобы узнать, о чём он, кто ведёт и как сдавать.</p>
   <div class="cards">
     <a class="card c1" href="https://alexmsu1514.github.io/latin-kurs/#economics">
+      <span class="num" aria-hidden="true">01</span>
       <small>Экономика · 3 курс</small>
       <strong>Латинская Америка</strong>
       <span class="t">Почему богатый регион бедно растёт: реформы, кризисы, институты, интеграция.</span>
       <span class="go">Подробнее →</span>
     </a>
     <a class="card c2" href="https://alexmsu1514.github.io/latin-kurs/#management">
+      <span class="num" aria-hidden="true">02</span>
       <small>Менеджмент · 4 курс</small>
       <strong>Латинская Америка</strong>
       <span class="t">Как заходить на рынок, где всё не по учебнику: риски, партнёры, кейсы компаний.</span>
       <span class="go">Подробнее →</span>
     </a>
     <a class="card c3" href="competitiveness/">
+      <span class="num" aria-hidden="true">03</span>
       <small>Магистратура · экономика</small>
       <strong>Международная конкурентоспособность</strong>
       <span class="t">Почему одни страны выигрывают, а другие вечно догоняют: рейтинги, ресурсы, валютный курс.</span>
       <span class="go">Подробнее →</span>
     </a>
     <a class="card c4" href="payments/">
+      <span class="num" aria-hidden="true">04</span>
       <small>Магистратура · экономика</small>
       <strong>Международные платежи и расчёты</strong>
       <span class="t">Как деньги пересекают границу: платёжные системы, цифровые валюты, клиринг.</span>
@@ -104,43 +174,87 @@ footer{padding:16px 0 26px;font-size:13px;opacity:.7;text-align:center}
     </a>
   </div>
 </div></section>
-<section id="about"><div class="wrap">
+<section id="pick" class="rv"><div class="wrap">
+  <h2>Какой спецкурс твой?</h2>
+  <p class="lead">Выбери, где учишься, и мы подскажем курс.</p>
+  <div class="tools" id="pk">
+    <button class="fb" type="button" data-p="e">Экономика, 3 курс</button>
+    <button class="fb" type="button" data-p="m">Менеджмент, 4 курс</button>
+    <button class="fb" type="button" data-p="g">Магистратура</button>
+  </div>
+  <div class="res" id="res" aria-live="polite">
+    <div class="r" data-r="e" hidden><b>Латинская Америка</b><span>Спецкурс для экономистов 3 курса.</span><a class="btn" href="https://alexmsu1514.github.io/latin-kurs/#economics">Смотреть курс</a></div>
+    <div class="r" data-r="m" hidden><b>Латинская Америка</b><span>Спецкурс для менеджеров 4 курса.</span><a class="btn" href="https://alexmsu1514.github.io/latin-kurs/#management">Смотреть курс</a></div>
+    <div class="r" data-r="g" hidden><b>Два курса на выбор</b><span>Международная конкурентоспособность или Международные платежи и расчёты.</span><a class="btn" href="competitiveness/">Конкурентоспособность</a> <a class="btn" href="payments/">Платежи и расчёты</a></div>
+  </div>
+</div></section>
+<section id="about" class="rv"><div class="wrap">
   <h2>Кто мы</h2>
   <div class="about">
     <p>Факультет с <b>1941 года</b> углублённо изучал экономику зарубежных стран. В <b>1953 году</b> открылись две кафедры, в 1955 их объединили в кафедру экономики зарубежных стран.</p>
     <p>Долгое время это была единственная в стране кафедра, готовившая специалистов по зарубежной тематике. Сегодня мы учим бакалавров и магистров, ведём научные центры и аспирантуру.</p>
   </div>
 </div></section>
-<section id="people"><div class="wrap">
-  <h2>Преподаватели</h2>
-  <div class="people">
-    <div class="person"><b>Афонцев С.А.</b><span>Член-корреспондент РАН, доктор экономических наук, профессор</span></div>
-    <div class="person"><b>Кулаков М.В.</b><span>Профессор, доктор экономических наук, Заслуженный профессор МГУ. Заведующий Лабораторией по изучению социально-экономических проблем развивающихся стран</span><span class="hl">Восемь лет провёл в Латинской Америке и знает регион изнутри</span></div>
-    <div class="person"><b>Швандар К.В.</b><span>Доктор экономических наук, профессор, и.о. заведующего кафедрой мировой экономики</span><span class="hl">Ведёт курсы «Международная конкурентоспособность» и «Международные платежи и расчёты»</span></div>
-    <div class="person"><b>Марков А.Р.</b><span>Доцент, кандидат экономических наук, советник декана, член Совета по развитию ЭФ МГУ</span><span class="hl">Около двадцати лет проработал во Всемирном банке</span></div>
-  </div>
-  <p class="sub">Также на кафедре</p>
-  <ul class="chips">
-    <li>Мазурова Е.К.</li>
-    <li>Клавдиенко В.П.</li>
-    <li>Лучко М.Л.</li>
-    <li>Белова Л.Г.</li>
-    <li>Вихорева О.М.</li>
-    <li>Гусейнов Д.А.</li>
-    <li>Дунаев С.А.</li>
-    <li>Зубенко В.А.</li>
-    <li>Карловская С.Б.</li>
-    <li>Лысунец М.В.</li>
-    <li>Ляменков А.К.</li>
-    <li>Олейник А.Н.</li>
-    <li>Старков В.Г.</li>
-    <li>Стулов О.В.</li>
-    <li>Фролов А.В.</li>
-    <li>Чихун Л.П.</li>
-    <li>Окунев В.И.</li>
+<section id="topics" class="rv"><div class="wrap">
+  <h2>Чем занимаемся</h2>
+  <ul class="topics">
+    <li>Международная торговля</li><li>Международные финансы</li><li>Развивающиеся страны</li><li>Латинская Америка</li><li>Конкурентоспособность стран</li><li>Транснациональный бизнес</li><li>Цифровая экономика</li><li>Международные платежи</li>
   </ul>
 </div></section>
-<section id="centers"><div class="wrap">
+<section id="people" class="rv"><div class="wrap">
+  <details class="group">
+    <summary><span>Преподаватели</span><em>21</em></summary>
+    <div class="gbody">
+      <p class="lead">Нажми на фамилию, чтобы раскрыть карточку. Или найди преподавателя по фамилии.</p>
+      <div class="tools">
+        <input id="q" type="search" placeholder="Фамилия" aria-label="Поиск по фамилии" autocomplete="off">
+        <button class="fb on" data-f="all" type="button">Все</button>
+        <button class="fb" data-f="spec" type="button">Ведут спецкурсы</button>
+      </div>
+      <div class="people" id="plist">
+        <details class="person top" data-tags="" data-name="афонцев сергей александрович"><summary>Афонцев Сергей Александрович</summary><div class="body"><span>Член-корреспондент РАН, доктор экономических наук, профессор</span><span class="hl">Заведующий отделом экономической теории ИМЭМО РАН</span></div></details>
+    <details class="person top" data-tags="spec" data-name="кулаков михаил васильевич"><summary>Кулаков Михаил Васильевич</summary><div class="body"><span>Профессор, доктор экономических наук, Заслуженный профессор МГУ. Заведующий Лабораторией по изучению социально-экономических проблем развивающихся стран</span><span class="lab">Спецкурсы</span><span>Латинская Америка (экономика, 3 курс)</span><span class="hl">Восемь лет провёл в Латинской Америке и знает регион изнутри</span></div></details>
+    <details class="person top" data-tags="spec" data-name="швандар к.в."><summary>Швандар К.В.</summary><div class="body"><span>Доктор экономических наук, профессор, и.о. заведующего кафедрой мировой экономики</span><span class="lab">Спецкурсы</span><span>Международная конкурентоспособность; Международные платежи и расчёты (магистратура)</span><span class="hl">Автор монографий по международной конкурентоспособности</span></div></details>
+    <details class="person empty top" data-tags="" data-name="лучко марина львовна"><summary>Лучко Марина Львовна</summary><div class="body"></div></details>
+    <details class="person empty top" data-tags="" data-name="карловская софья борисовна"><summary>Карловская Софья Борисовна</summary><div class="body"></div></details>
+    <details class="person" data-tags="spec" data-name="марков андрей романович"><summary>Марков Андрей Романович</summary><div class="body"><span>Доцент, кандидат экономических наук, советник декана, член Совета по развитию ЭФ МГУ</span><span class="lab">Спецкурсы</span><span>Латинская Америка (менеджмент, 4 курс)</span><span class="hl">Около двадцати лет проработал во Всемирном банке</span></div></details>
+    <details class="person empty" data-tags="" data-name="мазурова елена кирилловна"><summary>Мазурова Елена Кирилловна</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="клавдиенко виктор петрович"><summary>Клавдиенко Виктор Петрович</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="белова людмила георгиевна"><summary>Белова Людмила Георгиевна</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="вихорева ольга михайловна"><summary>Вихорева Ольга Михайловна</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="гусейнов джейхун акиф оглы"><summary>Гусейнов Джейхун Акиф оглы</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="дунаев сергей анатольевич"><summary>Дунаев Сергей Анатольевич</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="зубенко вера андреевна"><summary>Зубенко Вера Андреевна</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="лысунец марина валентиновна"><summary>Лысунец Марина Валентиновна</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="ляменков андрей константинович"><summary>Ляменков Андрей Константинович</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="олейник александр николаевич"><summary>Олейник Александр Николаевич</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="старков владимир германович"><summary>Старков Владимир Германович</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="стулов олег владимирович"><summary>Стулов Олег Владимирович</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="фролов андрей викторович"><summary>Фролов Андрей Викторович</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="чихун людмила петровна"><summary>Чихун Людмила Петровна</summary><div class="body"></div></details>
+    <details class="person empty" data-tags="" data-name="окунев владимир иванович"><summary>Окунев Владимир Иванович</summary><div class="body"></div></details>
+      </div>
+      <p class="none" id="none" hidden>Никого не нашли. Попробуй другую фамилию.</p>
+    </div>
+  </details>
+</div></section>
+<section id="study" class="rv"><div class="wrap">
+  <h2>Чему учим</h2>
+  <p class="lead">Программы, на которых работает кафедра. Расписание и темы курсовых и выпускных работ смотри на основном сайте.</p>
+  <ul class="centers">
+    <li>Экономика стран и регионов мира</li>
+    <li>Транснациональный бизнес</li>
+    <li>Международная экономика</li>
+    <li>Международная микроэкономика (на английском языке)</li>
+    <li>Мировая экономика в условиях развития цифровых технологий</li>
+  </ul>
+  <a class="btn" href="https://intereconomics.econ.msu.ru">Расписание и темы работ</a>
+</div></section>
+<section id="school" class="rv"><div class="wrap">
+  <h2>Школа молодого экономиста-международника</h2>
+  <div class="about"><p>Площадка кафедры для студентов, которые хотят глубже разобраться в мировой экономике. Актуальные темы и даты смотри на сайте кафедры.</p></div>
+</div></section>
+<section id="centers" class="rv"><div class="wrap">
   <h2>Научные центры</h2>
   <ul class="centers">
     <li>Центр исследований стран Азиатско-Тихоокеанского региона</li>
@@ -148,6 +262,16 @@ footer{padding:16px 0 26px;font-size:13px;opacity:.7;text-align:center}
     <li>Центр исследований стран СНГ</li>
   </ul>
 </div></section>
+<section id="faq" class="rv"><div class="wrap">
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <details><summary>Для кого спецкурсы?</summary><p>Латинская Америка: для экономистов 3 курса и менеджеров 4 курса. Международная конкурентоспособность и Международные платежи и расчёты: для магистров.</p></details>
+    <details><summary>Как записаться?</summary><p>Подробности о записи на спецкурсы уточняйте на кафедре мировой экономики. Точную информацию сообщим дополнительно.</p></details>
+    <details><summary>Где найти кафедру?</summary><p>ул. Академика Хохлова, д. 1, стр. 46, аудитория 361. <a href="https://yandex.ru/maps/?text=%D1%83%D0%BB.%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%A5%D0%BE%D1%85%D0%BB%D0%BE%D0%B2%D0%B0%201%20%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5%2046">Открыть на карте</a></p></details>
+    <details><summary>Как связаться с кафедрой?</summary><p>Телефон +7 495 939 50 55 или почта intereconomics@mail.econ.msu.ru.</p></details>
+  </div>
+</div></section>
+
 </main>
 <section class="contacts" id="contacts"><div class="wrap">
   <h2>Контакты</h2>
@@ -156,5 +280,49 @@ footer{padding:16px 0 26px;font-size:13px;opacity:.7;text-align:center}
   <p><a href="mailto:intereconomics@mail.econ.msu.ru">intereconomics@mail.econ.msu.ru</a></p>
   <a class="btn" href="https://intereconomics.econ.msu.ru">Основной сайт кафедры</a>
 </div></section>
+<a class="totop" href="#" aria-label="Наверх" hidden>↑</a>
 <footer>Кафедра мировой экономики, экономический факультет МГУ имени М.В. Ломоносова</footer>
+<script>
+(function(){
+var pk=document.getElementById('pk'),rs=[].slice.call(document.querySelectorAll('#res .r'));
+if(pk)[].forEach.call(pk.querySelectorAll('.fb'),function(b){b.addEventListener('click',function(){
+ [].forEach.call(pk.querySelectorAll('.fb'),function(x){x.classList.toggle('on',x===b)});
+ rs.forEach(function(r){r.hidden=r.getAttribute('data-r')!==b.getAttribute('data-p');});});});
+var tt=document.querySelector('.totop');
+if(tt){window.addEventListener('scroll',function(){tt.hidden=window.scrollY<700;},{passive:true});}
+})();
+</script>
+<script>
+(function(){
+var de=document.documentElement;
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+// reveal
+if('IntersectionObserver' in window&&!rm){
+ de.classList.add('js');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
+ [].forEach.call(document.querySelectorAll('.rv'),function(el){io.observe(el);});
+ // counters
+ [].forEach.call(document.querySelectorAll('.facts b'),function(b){var to=parseInt(b.textContent,10),t0=null,dur=1100;if(!to)return;b.textContent='0';
+  function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1);b.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);setTimeout(function(){b.textContent=to;},1400);});
+}
+// nav: подсветка и открытие списка преподавателей
+var links=[].slice.call(document.querySelectorAll('.nav a'));
+var g=document.querySelector('.group');
+links.forEach(function(a){a.addEventListener('click',function(){if(a.getAttribute('href')==='#people'&&g)g.open=true;});});
+if(location.hash==='#people'&&g)g.open=true;
+if('IntersectionObserver' in window){
+ var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+ ['courses','about','people','study','contacts'].forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el);});
+}
+})();
+</script>
+<script>
+(function(){
+var q=document.getElementById('q'),cards=[].slice.call(document.querySelectorAll('.person')),btns=[].slice.call(document.querySelectorAll('.fb')),none=document.getElementById('none'),f='all';
+function run(){var v=q.value.trim().toLowerCase(),n=0;cards.forEach(function(c){var ok=(f==='all'||c.getAttribute('data-tags').indexOf(f)>-1)&&c.getAttribute('data-name').indexOf(v)>-1;c.hidden=!ok;if(ok)n++;});none.hidden=n>0;}
+q.addEventListener('input',run);
+btns.forEach(function(b){b.addEventListener('click',function(){f=b.getAttribute('data-f');btns.forEach(function(x){x.classList.toggle('on',x===b)});run();});});
+})();
+</script>
 </body></html>
